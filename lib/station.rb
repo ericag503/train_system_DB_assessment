@@ -16,7 +16,7 @@ class Station
 		stations = []
 		results.each do |result|
 			name = result['name']
-			new_station = Station.new(:name => name)
+			new_station = Station.new({:name => name})
 			stations << new_station
 		end
 		stations
