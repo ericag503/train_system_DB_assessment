@@ -34,7 +34,7 @@ def operator_menu
 		add_line
 	elsif user_choice == 'ls'
 		list_station
-	elsif user_choice -- 'lt'
+	elsif user_choice == 'lt'
 		list_lines
 	elsif user_choice == 'r'
 		welcome
@@ -66,6 +66,13 @@ def list_station
 	puts "Here are all of the train stations:"
 	Station.all.each do |station|
 		puts "#{station.id}: #{station.name}"
+	end
+end
+
+def list_lines
+	puts "Here are all of the train lines:"
+	Lines.all.each do |line|
+		puts "#{line.id}: #{line.name}"
 	end
 end
 

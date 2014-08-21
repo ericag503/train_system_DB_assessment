@@ -16,7 +16,8 @@ class Lines
 		lines = []
 		results.each do |result|
 			name = result['name']
-			new_line = Lines.new({:name => name})
+			id = result['id']
+			new_line = Lines.new({:name => name, :id => id})
 			lines << new_line
 		end
 		lines
