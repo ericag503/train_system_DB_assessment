@@ -24,6 +24,4 @@ describe Station do
 	lines = Lines.lines_to_station(test_station.id)
 	expect(lines).to eq [test_line, test_line2]
   end
-
-
 end
