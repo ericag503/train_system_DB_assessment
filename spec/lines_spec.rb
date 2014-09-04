@@ -13,15 +13,15 @@ describe Lines do
   end
 
   it 'allows a particular train line to have a multiple station stops' do
-  	test_line = Lines.new({:name => 'A'})
-  	test_line.save 
-  	test_station = Station.new({:name => 'Everett'})
-  	test_station.save
-  	test_station2 = Station.new({:name => 'Flanders'})
-  	test_station2.save 
-  	Lines.stops(test_line.id, test_station.id)
-  	Lines.stops(test_line.id, test_station2.id)
-  	stations = Station.stations_to_lines(test_line.id)
-  	expect(stations).to eq [test_station, test_station2]
+	test_line = Lines.new({:name => 'A'})
+	test_line.save 
+	test_station = Station.new({:name => 'Everett'})
+	test_station.save
+	test_station2 = Station.new({:name => 'Flanders'})
+	test_station2.save 
+	Lines.stops(test_line.id, test_station.id)
+	Lines.stops(test_line.id, test_station2.id)
+	stations = Station.stations_to_lines(test_line.id)
+	expect(stations).to eq [test_station, test_station2]
   end
 end
